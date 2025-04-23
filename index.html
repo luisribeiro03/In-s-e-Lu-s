@@ -112,22 +112,18 @@
     </div>
   </div>
 
-  <div class="section">
-    <h2>Ouça a Música</h2>
-    <audio id="musica" autoplay muted>
-      <source src="https://github.com/luisribeiro03/In-s-e-Lu-s/raw/refs/heads/main/Tom%20Rosenthal%20(Edith%20Whiskers)%20-%20Home%20(Lyrics).mp3" type="audio/mp3">
-      Seu navegador não suporta a tag de áudio.
-    </audio>
+  <audio id="musica">
+  <source src="https://github.com/luisribeiro03/In-s-e-Lu-s/raw/refs/heads/main/Tom%20Rosenthal%20(Edith%20Whiskers)%20-%20Home%20(Lyrics).mp3" type="audio/mp3">
+  Seu navegador não suporta a tag de áudio.
+</audio>
 
-    <script>
-      // Após o carregamento da página, removemos o "muted" para permitir a reprodução com som
-      window.addEventListener('load', () => {
-        var musica = document.getElementById('musica');
-        musica.muted = false;  // Retira o mudo assim que a página carregar
-        musica.play();  // Começa a tocar
-      });
-    </script>
-  </div>
+<script>
+  document.body.addEventListener('click', function() {
+    var musica = document.getElementById('musica');
+    musica.muted = false;  // Desativa o mudo
+    musica.play();  // Começa a tocar a música
+  });
+</script>
 
   <div class="section">
     <h2>Poema 🌻🌊☀️</h2>
