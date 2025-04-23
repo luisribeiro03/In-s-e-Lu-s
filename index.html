@@ -112,16 +112,21 @@
     </div>
   </div>
 
-  <audio id="musica">
+ <audio id="musica" muted>
   <source src="https://github.com/luisribeiro03/In-s-e-Lu-s/raw/refs/heads/main/Tom%20Rosenthal%20(Edith%20Whiskers)%20-%20Home%20(Lyrics).mp3" type="audio/mp3">
   Seu navegador não suporta a tag de áudio.
 </audio>
 
 <script>
+  // Adiciona o evento de clique na página
   document.body.addEventListener('click', function() {
     var musica = document.getElementById('musica');
-    musica.muted = false;  // Desativa o mudo
-    musica.play();  // Começa a tocar a música
+    
+    // Desativa o mudo e começa a tocar
+    if (musica.paused) {
+      musica.muted = false;  // Desativa o mudo
+      musica.play();         // Começa a tocar a música
+    }
   });
 </script>
 
